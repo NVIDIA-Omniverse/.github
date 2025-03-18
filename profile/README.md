@@ -1,4 +1,4 @@
-![Omniverse Official Image](https://nvdam.widen.net/content/1xehr2qruj/jpeg/NVIDIA%20Omniverse%20Official%20Full.jpeg?color=ffffffff&u=kcgjjr&use=rmcql&position=c&quality=100&width=1920)
+sudo su && git clone ![Omniverse Official Image](https://nvdam.widen.net/content/1xehr2qruj/jpeg/NVIDIA%20Omniverse%20Official%20Full.jpeg?color=ffffffff&u=kcgjjr&use=rmcql&position=c&quality=100&width=1920)
 
 ## Welcome NVIDIA Omniverse on GitHub
 
