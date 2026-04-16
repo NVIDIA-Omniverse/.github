@@ -17,6 +17,7 @@ Agent Skills and MCP (Model Context Protocol) servers help AI coding assistants 
 | Name | Type | Description | Repository |
 |------|------|-------------|------------|
 | **ovrtx** | Agent Skills | Omniverse RTX SDK — renderer setup, USD scene loading, rendering, attribute writing, CUDA/Vulkan interop, and project scaffolding. | [NVIDIA-Omniverse/ovrtx/skills/](https://github.com/NVIDIA-Omniverse/ovrtx/tree/main/skills) |
+| **ovphysx** | Agent Skills | USD physics simulation — C API with Python bindings, DLPack tensor interop, environment cloning for batched RL, and rigid body simulation. | [NVIDIA-Omniverse/PhysX/ovphysx/](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx) |
 | **Kit MCP** | MCP Server | Kit development assistant — semantic search across 400+ extensions, dependency graphs, API docs, code examples, and app templates. | [kit-usd-agents/source/mcp/kit_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/kit_mcp) |
 | **USD Code MCP** | MCP Server | USD/OpenUSD development assistant — module and class browsing, method signatures, code examples, and semantic search. | [kit-usd-agents/source/mcp/usd_code_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/usd_code_mcp) |
 | **OmniUI MCP** | MCP Server | OmniUI development assistant — class and module browsing, method docs, code examples, and system instructions. | [kit-usd-agents/source/mcp/omni_ui_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/omni_ui_mcp) |
