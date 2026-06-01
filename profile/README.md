@@ -20,6 +20,20 @@ Agent Skills and MCP (Model Context Protocol) servers help AI coding assistants 
 | **USD Code MCP** | MCP Server | USD/OpenUSD development assistant — module and class browsing, method signatures, code examples, and semantic search. | [kit-usd-agents/source/mcp/usd_code_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/usd_code_mcp) |
 | **OmniUI MCP** | MCP Server | OmniUI development assistant — class and module browsing, method docs, code examples, and system instructions. | [kit-usd-agents/source/mcp/omni_ui_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/omni_ui_mcp) |
 
+### Physical AI Skills
+
+The following NVIDIA Physical AI skills are available:
+
+- [omniverse-cad-to-simready](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready)
+- [omniverse-realtime-viewer](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-realtime-viewer)
+- [omniverse-usd-performance-tuning](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-usd-performance-tuning)
+- [physical-ai-defect-image-generation](https://github.com/NVIDIA/skills/tree/main/skills/physical-ai-defect-image-generation)
+- [physical-ai-infrastructure-setup-and-resilient-scaling](https://github.com/NVIDIA/skills/tree/main/skills/physical-ai-infrastructure-setup-and-resilient-scaling)
+- [physical-ai-neural-reconstruction](https://github.com/NVIDIA/skills/tree/main/skills/physical-ai-neural-reconstruction)
+- [physical-ai-video-data-augmentation](https://github.com/NVIDIA/skills/tree/main/skills/physical-ai-video-data-augmentation)
+
+These skills are also available in [Vercel's Skill Marketplace](https://www.skills.sh/nvidia/skills) under the Physical AI section, and as plugins in the Claude Code marketplace and Codex marketplace.
+
 See also the [NVIDIA Agent Skills catalog](https://github.com/NVIDIA/skills) for skills across the NVIDIA ecosystem.
 
 ## Additional Resources
