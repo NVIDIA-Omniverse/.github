@@ -1,23 +1,38 @@
 ## Welcome NVIDIA Omniverse on GitHub
 
-The NVIDIA Omniverse GitHub organization hosts the standalone Omniverse libraries, OpenUSD tooling and SDKs, and sample code repositories that demonstrate the use of Omniverse technologies.
+NVIDIA Omniverse is a collection of accelerated libraries, OpenUSD tooling, and sample repositories for building Physical AI applications — robotics simulation, industrial digital twins, and synthetic data generation.
+
+These repositories expose Omniverse core technologies as standalone, embeddable libraries with well-defined C and Python APIs. Integrate RTX rendering, PhysX simulation, streaming, and storage directly into your existing applications and training pipelines.
+
+## Physical AI workflows
+
+| Workflow | What you build | Key libraries |
+|----------|----------------|---------------|
+| **Robotics simulation & training** | RL/IL environments, policy validation, Isaac Lab–style headless physics at scale | [ovphysx](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx), [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) |
+| **Industrial digital twins & VFI** | Factory layouts, operations simulation, PLM-connected asset pipelines | [ovstorage](https://github.com/NVIDIA-Omniverse/ovstorage), [ovpackage](https://github.com/NVIDIA-Omniverse/ovpackage), OpenUSD tooling (below) |
+| **Sensor rendering & synthetic data** | Multimodal perception, defect/augmentation datasets, scalable GPU rendering | [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [usd-convert-*](https://github.com/NVIDIA-Omniverse/usd-convert-asset), Physical AI skills (below) |
 
 ## Omniverse Libraries
 
 Standalone, embeddable libraries that bring core Omniverse technologies to any application. Each provides C and/or Python APIs, and most ship agent skills for AI-assisted development (see [Agent Skills and MCP Servers](#agent-skills-and-mcp-servers) below).
 
+### Core simulation & data
+
 | Library | Description |
 |---------|-------------|
-| [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx) | A C and Python library for physically accurate, real-time sensor simulation and visualization using NVIDIA Omniverse RTX. |
+| [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx) | A C and Python library for physically accurate, real-time sensor simulation and visualization using NVIDIA Omniverse RTX, which also enables headless SDG. |
 | [ovphysx](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx) | USD physics simulation built on the NVIDIA PhysX SDK — C API with Python bindings, DLPack tensor interop, and environment cloning for batched reinforcement learning. Part of the [PhysX](https://github.com/NVIDIA-Omniverse/PhysX) repository. |
-| [ovui](https://github.com/NVIDIA-Omniverse/ovui) | The standalone distribution of Omniverse's omni.ui UI framework — a declarative, Python-first API for building hardware-accelerated desktop interfaces backed by ImGui — plus application widget and OpenUSD data-adapter layers. |
-| [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) | C library with Python bindings for streaming video, audio, and input over WebRTC, RTSP, native (StreamSDK), and SHM (shared-memory) transports, with GPU-accelerated NVENC encoding. |
 | [ovstorage](https://github.com/NVIDIA-Omniverse/ovstorage) | Agent-first, plugin-based storage client for local files, cloud object stores, and Omniverse Storage services. |
-| [ovpackage](https://github.com/NVIDIA-Omniverse/ovpackage) | Command-line tool and async Python API for reproducible asset packaging and publishing across local and cloud storage backends. |
+
+### Application composition
+
+| [ovui](https://github.com/NVIDIA-Omniverse/ovui) | The standalone distribution of Omniverse's omni.ui UI framework — a declarative, Python-first API for building hardware-accelerated desktop interfaces backed by ImGui — plus application widget and OpenUSD data-adapter layers. |
+| [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) | Stream video, audio, and input over WebRTC, RTSP, native, and shared-memory transports, with GPU-accelerated NVENC encoding for remote teleop and visualization. |
+| [ovpackage](https://github.com/NVIDIA-Omniverse/ovpackage) | Reproducible asset packaging and publishing across local and cloud storage backends for SimReady and production pipelines. |
 
 ## OpenUSD Tooling and SDKs
 
-Libraries and services for authoring, validating, converting, optimizing, and searching OpenUSD content:
+OpenUSD is the shared scene description layer across Omniverse libraries, Isaac Sim, and industrial digital-twin pipelines. These repos help you author, validate, convert, optimize, and search USD content for simulation-ready assets:
 
 - [usd-exchange](https://github.com/NVIDIA-Omniverse/usd-exchange) — OpenUSD Exchange SDK for authoring consistent and correct USD ([samples](https://github.com/NVIDIA-Omniverse/usd-exchange-samples))
 - [usd-validation-nvidia](https://github.com/NVIDIA-Omniverse/usd-validation-nvidia) — extensible framework to validate OpenUSD assets
@@ -29,7 +44,7 @@ Libraries and services for authoring, validating, converting, optimizing, and se
 
 ## Agent Skills and MCP Servers
 
-Agent Skills and MCP (Model Context Protocol) servers help AI coding assistants work with Omniverse technologies. Skills provide structured reference docs that agents can load on demand, and MCP servers expose searchable tool APIs for Kit extensions, USD, and OmniUI.
+Omniverse libraries and Kit expose MCP servers so LLM-based agents can load scenes, step simulation, and generate USD/UI code safely. Per-library agent skills provide on-demand reference for coding assistants.
 
 | Name | Type | Description | Repository |
 |------|------|-------------|------------|
@@ -45,7 +60,7 @@ Agent Skills and MCP (Model Context Protocol) servers help AI coding assistants 
 
 ### Physical AI Skills
 
-The following NVIDIA Physical AI skills are available:
+These skills complement the libraries above for end-to-end Physical AI workflows — CAD-to-SimReady asset prep, neural reconstruction, defect SDG, infrastructure scaling, and USD performance tuning.
 
 - [omniverse-cad-to-simready](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready)
 - [omniverse-realtime-viewer](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-realtime-viewer)
@@ -60,7 +75,7 @@ These skills are also available in [Vercel's Skill Marketplace](https://www.skil
 See also the [NVIDIA Agent Skills catalog](https://github.com/NVIDIA/skills) for skills across the NVIDIA ecosystem.
 
 ## Blueprints and Workflows
-Omniverse Workflows and Blueprints provide step-by-step guides and reference implementations for a variety of development scenarios. They can help you get started quickly with use cases such as virtual facility integration (VFI), configurator development, synthetic data generation, and more. These resources build on repositories in this Omniverse GitHub organization.
+Omniverse Workflows and Blueprints provide step-by-step guides and reference implementations for a variety of development scenarios. They can help you get started quickly with use cases such as robotics training environments, AI-factory digital twins (DSX), synthetic data pipelines, virtual facility integration (VFI), and configurator development. These are built on Omniverse libraries and OpenUSD.
 
 - [Blueprints and Workflows Documentation](https://docs.nvidia.com/omniverse/index.html#blueprints-workflows)
 - [NVIDIA-Omniverse-blueprints on GitHub](https://github.com/NVIDIA-Omniverse-blueprints)
@@ -69,3 +84,7 @@ Omniverse Workflows and Blueprints provide step-by-step guides and reference imp
 
 - [Omniverse Developer Page](https://developer.nvidia.com/omniverse)
 - [Omniverse Platform Documentation](https://docs.nvidia.com/omniverse/index.html)
+- [Integrate Physical AI into existing apps (technical blog)](https://developer.nvidia.com/blog/integrate-physical-ai-capabilities-into-existing-apps-with-nvidia-omniverse-libraries/)
+- [Isaac Sim](https://developer.nvidia.com/isaac-sim) · [Isaac Lab](https://github.com/isaac-sim/IsaacLab) — robotics simulation frameworks adopting Omniverse libraries
+- [NVIDIA Agent Skills catalog](https://github.com/NVIDIA/skills/tree/main/skills)
+- [Omniverse Discord](https://discord.com/invite/nvidiaomniverse) — feedback on early-access libraries
