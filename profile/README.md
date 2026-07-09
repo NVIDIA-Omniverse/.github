@@ -8,9 +8,9 @@ These repositories expose Omniverse core technologies as standalone, embeddable 
 
 | Workflow | What you build | Key libraries |
 |----------|----------------|---------------|
-| **Robotics simulation & training** | RL/IL environments, policy validation, Isaac Lab–style headless physics at scale | [ovphysx](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx), [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) |
+| **Robotics simulation & training** | RL/IL environments, policy validation, Isaac Lab–style headless physics at scale | [ovphysx](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx), [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) |
 | **Industrial digital twins & VFI** | Factory layouts, operations simulation, PLM-connected asset pipelines | [ovstorage](https://github.com/NVIDIA-Omniverse/ovstorage), [ovpackage](https://github.com/NVIDIA-Omniverse/ovpackage), OpenUSD tooling (below) |
-| **Sensor rendering & synthetic data** | Multimodal perception, defect/augmentation datasets, scalable GPU rendering | [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [usd-convert-*](https://github.com/NVIDIA-Omniverse/usd-convert-asset), Physical AI skills (below) |
+| **Sensor rendering & synthetic data** | Multimodal perception, defect/augmentation datasets, scalable GPU rendering | [ovrtx](https://github.com/NVIDIA-Omniverse/ovrtx), [usd-convert-*](https://github.com/NVIDIA-Omniverse/usd-convert-asset), Physical AI skills (below) |
 
 ## Omniverse Libraries
 
@@ -26,6 +26,8 @@ Standalone, embeddable libraries that bring core Omniverse technologies to any a
 
 ### Application composition
 
+| Library | Description |
+|---------|-------------|
 | [ovui](https://github.com/NVIDIA-Omniverse/ovui) | The standalone distribution of Omniverse's omni.ui UI framework — a declarative, Python-first API for building hardware-accelerated desktop interfaces backed by ImGui — plus application widget and OpenUSD data-adapter layers. |
 | [ovstream](https://github.com/NVIDIA-Omniverse/ovstream) | Stream video, audio, and input over WebRTC, RTSP, native, and shared-memory transports, with GPU-accelerated NVENC encoding for remote teleop and visualization. |
 | [ovpackage](https://github.com/NVIDIA-Omniverse/ovpackage) | Reproducible asset packaging and publishing across local and cloud storage backends for SimReady and production pipelines. |
@@ -48,15 +50,15 @@ Omniverse libraries and Kit expose MCP servers so LLM-based agents can load scen
 
 | Name | Type | Description | Repository |
 |------|------|-------------|------------|
-| **ovrtx** | Agent Skills | Omniverse RTX SDK — renderer setup, USD scene loading, rendering, attribute writing, CUDA/Vulkan interop, and project scaffolding. | [ovrtx/skills/](https://github.com/NVIDIA-Omniverse/ovrtx/tree/main/skills) |
-| **ovphysx** | Agent Skills | USD physics simulation — C API with Python bindings, DLPack tensor interop, environment cloning for batched RL, and rigid body simulation. | [PhysX/ovphysx/](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx) |
-| **ovui** | Agent Skills | Standalone omni.ui framework — declarative Python UI building, widgets, layout, and styling. | [ovui/skills/](https://github.com/NVIDIA-Omniverse/ovui/tree/main/skills) |
+| **ovrtx** | Agent Skills | Omniverse RTX SDK — renderer setup, USD scene loading, rendering, attribute writing, CUDA/Vulkan interop, and project scaffolding. | [ovrtx/skills/](https://github.com/NVIDIA-Omniverse/ovrtx/tree/main/skills) |
+| **ovphysx** | Agent Skills | USD physics simulation — C API with Python bindings, DLPack tensor interop, environment cloning for batched RL, and rigid body simulation. | [PhysX/ovphysx/](https://github.com/NVIDIA-Omniverse/PhysX/tree/main/ovphysx) |
+| **ovui** | Agent Skills | Standalone omni.ui framework — declarative Python UI building, widgets, layout, and styling. | [ovui/skills/](https://github.com/NVIDIA-Omniverse/ovui/tree/main/skills) |
 | **ovstream** | Agent Skills | Streaming library — video, audio, and input streaming over WebRTC, RTSP, native, and shared-memory transports. | [ovstream/skills/](https://github.com/NVIDIA-Omniverse/ovstream/tree/main/skills) |
 | **ovstorage** | Agent Skills | Storage client — local files, cloud object stores, and Omniverse Storage services. | [ovstorage/skills/](https://github.com/NVIDIA-Omniverse/ovstorage/tree/main/skills) |
 | **ovpackage** | Agent Skills | Asset packaging and publishing — CLI and Python API workflows. | [ovpackage/.agents/skills/](https://github.com/NVIDIA-Omniverse/ovpackage/tree/main/.agents/skills) |
-| **Kit MCP** | MCP Server | Kit development assistant — semantic search across 400+ extensions, dependency graphs, API docs, code examples, and app templates. | [kit-usd-agents/source/mcp/kit_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/kit_mcp) |
-| **USD Code MCP** | MCP Server | USD/OpenUSD development assistant — module and class browsing, method signatures, code examples, and semantic search. | [kit-usd-agents/source/mcp/usd_code_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/usd_code_mcp) |
-| **OmniUI MCP** | MCP Server | OmniUI development assistant — class and module browsing, method docs, code examples, and system instructions. | [kit-usd-agents/source/mcp/omni_ui_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/omni_ui_mcp) |
+| **Kit MCP** | MCP Server | Kit development assistant — semantic search across 400+ extensions, dependency graphs, API docs, code examples, and app templates. | [kit-usd-agents/source/mcp/kit_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/kit_mcp) |
+| **USD Code MCP** | MCP Server | USD/OpenUSD development assistant — module and class browsing, method signatures, code examples, and semantic search. | [kit-usd-agents/source/mcp/usd_code_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/usd_code_mcp) |
+| **OmniUI MCP** | MCP Server | OmniUI development assistant — class and module browsing, method docs, code examples, and system instructions. | [kit-usd-agents/source/mcp/omni_ui_mcp/](https://github.com/NVIDIA-Omniverse/kit-usd-agents/tree/main/source/mcp/omni_ui_mcp) |
 
 ### Physical AI Skills
 
